@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
+  // darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -10,7 +10,7 @@ module.exports = {
     extend: {
       screens: {
         widescreen: { raw: "(min-aspect-ratio: 3/2)" },
-        tallscreen: { raw: "(min-aspect-ratio: 13/20)" },
+        tallscreen: { raw: "(max-aspect-ratio: 13/20)" },
       },
       keyframes: {
         "open-menu": {

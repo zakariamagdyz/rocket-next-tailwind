@@ -16,10 +16,24 @@ const Header = () => {
         </h1>
         <button
           id="hamburger-open-button"
-          className=" cursor-pointer text-3xl md:hidden"
+          className={`relative h-8 w-8 cursor-pointer text-3xl md:hidden ${
+            isMobileMenuOpen ? "toggle-btn" : ""
+          }`}
           onClick={onMobileMenuClick}
         >
-          &#9776;
+          <div
+            className="absolute top-4 -mt-0.5 h-1 w-8 
+            rounded bg-white 
+            transition-all duration-500
+            before:absolute
+            before:top-0 before:h-1   
+            before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded 
+            before:bg-white before:transition-all before:duration-500 before:content-['']
+            after:absolute after:bottom-0 after:h-1
+            after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded 
+            after:bg-white after:transition-all after:duration-500 after:content-['']
+            "
+          ></div>
         </button>
 
         <nav className="hidden text-xl md:block" aria-label="main">
@@ -44,11 +58,11 @@ const Header = () => {
       </section>
       <section
         id="mobile-menu"
-        className={` absolute top-0 w-full origin-top animate-open-menu flex-col justify-center bg-black text-5xl ${shouldOpenMobileMenu}`}
+        className={` absolute top-[68px] w-full origin-top animate-open-menu flex-col justify-center bg-black text-5xl ${shouldOpenMobileMenu}`}
       >
-        <button className="self-end px-6 text-8xl" onClick={onMobileMenuClick}>
+        {/* <button className="self-end px-6 text-8xl" onClick={onMobileMenuClick}>
           &times;
-        </button>
+        </button> */}
         <nav
           className="flex min-h-screen flex-col items-center py-8"
           onClick={onMobileMenuClick}
