@@ -13,7 +13,7 @@ const Contact = () => {
         action=""
         className="mx-auto flex max-w-4xl flex-col items-start gap-4 text-2xl text-slate-900 sm:text-3xl "
       >
-        <label htmlFor="subject" className="text-white">
+        <label htmlFor="subject" className="text-white dark:text-black">
           Subject:
         </label>
         <input
@@ -26,7 +26,7 @@ const Contact = () => {
           placeholder="Your Subject"
           className="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black dark:border-none sm:text-3xl"
         />
-        <label htmlFor="message" className="text-white">
+        <label htmlFor="message" className="text-white dark:text-black">
           Message:
         </label>
         <textarea

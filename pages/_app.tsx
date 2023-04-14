@@ -8,6 +8,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <Fragment>
       <Head>
         <title>Rocket app</title>
+        <meta
+          name="description"
+          content="Rocket plans for people who intersted in traveling with rockets"
+        />
       </Head>
       <Component {...pageProps} />
     </Fragment>
